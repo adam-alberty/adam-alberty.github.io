@@ -1,13 +1,13 @@
 export const projects = [
   {
-    name: "Local Version Control System Inspired by Git",
+    name: "A version control system inspired by Git.",
     tech: ["Rust", "VCS", "Git"],
     description: `A Git-like version control system with staging area, branches and other Git features built in Rust.`,
-    link: "https://github.com/fiit-chain",
+    link: "https://github.com/adam-alberty/jit",
   },
 
   {
-    name: "Monkey Lang Interpreter",
+    name: "Monkey language interpreter",
     tech: ["Rust", "Interpreter Design", "Language Implementation"],
     description: `A complete interpreter for the Monkey programming language, implemented in Rust while working through Thorsten Ball's book. Covers lexing, parsing and AST evaluation.`,
     link: "https://github.com/adam-alberty/rust-monkey",
@@ -34,7 +34,7 @@ export const projects = [
   {
     name: "Personal Website",
     tech: ["SvelteKit", "Tailwind CSS", "Personal Website"],
-    description: `My Personal website built with SvelteKit and Tailwind, focusing performance and minimalism.`,
+    description: `My personal website built with Astro and Tailwind, focusing on performance.`,
     link: "https://github.com/adam-alberty/personal-website",
   },
 
@@ -42,7 +42,7 @@ export const projects = [
     name: "Price Quote Generator Electron App",
     tech: ["Electron", "Price quotes"],
     description: `Desktop application for generating price quote PDFs for businesses.`,
-    link: "TODO",
+    link: "",
   },
   {
     name: "Laravel E-Commerce Application",
