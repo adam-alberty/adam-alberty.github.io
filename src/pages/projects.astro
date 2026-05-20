@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Page.astro";
+import { projects } from "../content/projects";
+import Project from "../components/Project.astro";
+---
+
+<Layout
+  title="Projects"
+  description="A selection of my programming projects exploring systems, networking, and full-stack development."
+>
+  <ul class="mt-5 grid gap-20">
+    {
+      projects.map((project) => (
+        <li>
+          <Project
+            name={project.name}
+            tech={project.tech}
+            link={project.link}
+            description={project.description}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

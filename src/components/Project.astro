@@ -1,0 +1,37 @@
+---
+type Props = {
+  name: string;
+  tech: string[];
+  description: string;
+  link: string;
+};
+
+let { name, tech, description, link } = Astro.props;
+---
+
+<div class="flex flex-col items-start gap-5">
+  <div class="shrink">
+    <h2 class="font-display text-2xl font-medium">{name}</h2>
+    <p class="mt-5 text-lg text-pretty text-muted-foreground">
+      {description}
+    </p>
+
+    <ul class="mt-5 flex flex-wrap items-center gap-2 text-sm">
+      {
+        tech.map((t) => (
+          <li class="rounded-full border p-1 px-3">
+            <span>{t}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <a
+      href={link}
+      class="group mt-5 inline-flex items-center gap-3 text-primary transition-all hover:tracking-widest"
+      >See on GitHub
+      <span class="icon-[lucide--arrow-right] transition-all group-hover:ml-2"
+      ></span>
+    </a>
+  </div>
+</div>
