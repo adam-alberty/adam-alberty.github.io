@@ -91,10 +91,8 @@
   }
 }
 
-@layer components {
-  .container {
-    @apply px-5;
-  }
+@utility container {
+  @apply px-5 xl:max-w-250;
 }
 
 .markdown {
