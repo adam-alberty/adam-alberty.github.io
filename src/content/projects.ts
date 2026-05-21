@@ -33,7 +33,7 @@ export const projects = [
 
   {
     name: "Personal Website",
-    tech: ["SvelteKit", "Tailwind CSS", "Personal Website"],
+    tech: ["Astro", "Tailwind CSS"],
     description: `My personal website built with Astro and Tailwind, focusing on performance.`,
     link: "https://github.com/adam-alberty/personal-website",
   },

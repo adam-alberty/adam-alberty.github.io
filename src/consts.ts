@@ -8,3 +8,5 @@ export const SITE_DESCRIPTION =
 export const EMAIL = "alberty.adam@proton.me";
 export const PGP_KEY_URL =
   "https://raw.githubusercontent.com/adam-alberty/adam-alberty/refs/heads/main/public-key.asc";
+
+export const GITHUB_USERNAME = "adam-alberty";

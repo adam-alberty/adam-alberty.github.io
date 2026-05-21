@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin '@iconify/tailwind4';
+
 :root {
   --background: #141414;
   --foreground: oklch(0.985 0 0);
@@ -86,5 +88,49 @@
   }
   body {
     @apply bg-background font-sans text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-5;
+  }
+}
+
+.markdown {
+  @apply max-w-prose;
+
+  p {
+    @apply mb-5;
+  }
+
+  h1 {
+    @apply text-3xl my-5;
+  }
+
+  h2 {
+    @apply text-2xl my-4;
+  }
+
+  h3,
+  h4,
+  h5 {
+    @apply text-xl my-3;
+  }
+
+  code {
+    @apply bg-muted;
+  }
+
+  blockquote {
+    @apply border-l-2 pl-3;
+  }
+
+  ul {
+    @apply list-disc ml-5;
+  }
+
+  ol {
+    @apply list-decimal ml-5;
   }
 }
