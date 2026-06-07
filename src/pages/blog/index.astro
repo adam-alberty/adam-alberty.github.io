@@ -20,14 +20,16 @@ const posts = (await getCollection("blog")).sort(
     <Header />
     <main class="container mx-auto">
       <section>
-        <ul class="grid gap-5">
+        <ul class="grid divide-y">
           {
             posts.map((post) => (
               <li>
-                <a href={`/blog/${post.id}/`}>
-                  <h4 class="font-medium text-lg">{post.data.title}</h4>
-                  <p class="text-muted-foreground">{post.data.description}</p>
-                  <p class="text-muted-foreground mt-2">
+                <a
+                  href={`/blog/${post.id}/`}
+                  class="flex justify-between items-start py-4"
+                >
+                  <h4 class="font-semibold text-lg">{post.data.title}</h4>
+                  <p class="text-muted-foreground mt-2 text-sm">
                     <FormattedDate date={post.data.pubDate} />
                     {post.data.updatedDate && (
                       <>

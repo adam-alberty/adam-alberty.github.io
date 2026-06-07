@@ -4,8 +4,13 @@ import { EMAIL, GITHUB_USERNAME, SITE_TITLE } from "../consts";
 const today = new Date();
 ---
 
-<footer class="container mx-auto mt-[20vh] py-5">
-  <ul class="flex gap-3 mb-3">
+<footer class="container mx-auto mt-[20vh] py-5 flex justify-between">
+  <p>
+    &copy; {today.getFullYear()}
+    {SITE_TITLE}.
+  </p>
+
+  <ul class="flex gap-3 mb-3 underline">
     <li>
       <a href={`mailto:${EMAIL}`}>email</a>
     </li>
@@ -13,9 +18,4 @@ const today = new Date();
       <a href={`https://github.com/${GITHUB_USERNAME}`}>github</a>
     </li>
   </ul>
-
-  <p>
-    &copy; {today.getFullYear()}
-    {SITE_TITLE}. All rights reserved.
-  </p>
 </footer>

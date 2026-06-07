@@ -1,5 +1,5 @@
 ---
-import { EMAIL, PGP_KEY_URL } from "../consts";
+import { EMAIL, GITHUB_USERNAME, PGP_KEY_URL } from "../consts";
 import Layout from "../layouts/Page.astro";
 ---
 
@@ -8,9 +8,14 @@ import Layout from "../layouts/Page.astro";
   description="Contact"
   pubDate={new Date("August 08 2021")}
 >
-  <p>
-    You can contact me via email at <span class="bg-muted">{EMAIL}</span>. If
-    you want to use encrypted communication, you can use my
-    <a href={PGP_KEY_URL} class="text-primary underline">pgp key</a>.
-  </p>
+  <ul class="underline grid gap-4">
+    <li>
+      <a href={`mailto:${EMAIL}`}>Email: {EMAIL}</a>
+      <a href={`${PGP_KEY_URL}`}>(PGP key)</a>
+    </li>
+
+    <li>
+      <a href={`mailto:${EMAIL}`}>Github: {GITHUB_USERNAME}</a>
+    </li>
+  </ul>
 </Layout>
