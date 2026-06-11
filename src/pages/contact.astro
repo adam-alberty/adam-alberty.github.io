@@ -1,5 +1,10 @@
 ---
-import { EMAIL, GITHUB_USERNAME, PGP_KEY_URL } from "../consts";
+import {
+  EMAIL,
+  GITHUB_USERNAME,
+  PGP_KEY_FINGERPRINT,
+  PGP_KEY_URL,
+} from "../consts";
 import Layout from "../layouts/Page.astro";
 ---
 
@@ -8,14 +13,20 @@ import Layout from "../layouts/Page.astro";
   description="Contact"
   pubDate={new Date("August 08 2021")}
 >
-  <ul class="underline grid gap-4">
+  <ul class="grid gap-4">
     <li>
-      <a href={`mailto:${EMAIL}`}>Email: {EMAIL}</a>
-      <a href={`${PGP_KEY_URL}`}>(PGP key)</a>
+      <span>Email: </span>
+      <a class="underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>
     </li>
 
     <li>
-      <a href={`mailto:${EMAIL}`}>Github: {GITHUB_USERNAME}</a>
+      <a class="underline" href={`${PGP_KEY_URL}`}>My PGP key</a>
+      <span>(fingerprint: <code>{PGP_KEY_FINGERPRINT}</code>)</span>
+    </li>
+
+    <li>
+      <span>Github: </span>
+      <a class="underline" href={`mailto:${EMAIL}`}>{GITHUB_USERNAME}</a>
     </li>
   </ul>
 </Layout>
